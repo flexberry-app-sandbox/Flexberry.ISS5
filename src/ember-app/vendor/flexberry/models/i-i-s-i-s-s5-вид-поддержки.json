@@ -1,0 +1,92 @@
+﻿{
+  "name": "IISISS5ВидПоддержки",
+  "modelName": "i-i-s-i-s-s5-вид-поддержки",
+  "className": "ВидПоддержки",
+  "nameSpace": "IIS.ISS5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерУсловия",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "пользователь",
+      "relatedTo": "i-i-s-i-s-s5-пользователь",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "условие",
+      "relatedTo": "i-i-s-i-s-s5-условие",
+      "inverse": "видПоддержки"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ВидПоддержкиE",
+      "modelName": "i-i-s-i-s-s5-вид-поддержки",
+      "attrs": [
+        {
+          "name": "номерУсловия",
+          "caption": "Номер условия",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Пользователь",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Пользователь",
+          "name": "пользователь",
+          "relatedTo": "i-i-s-i-s-s5-пользователь",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

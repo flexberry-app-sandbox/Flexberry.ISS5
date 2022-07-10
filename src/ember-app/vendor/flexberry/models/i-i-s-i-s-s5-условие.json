@@ -1,0 +1,89 @@
+﻿{
+  "name": "IISISS5Условие",
+  "modelName": "i-i-s-i-s-s5-условие",
+  "className": "Условие",
+  "nameSpace": "IIS.ISS5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерУсловия",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "видПоддержки",
+      "relatedTo": "i-i-s-i-s-s5-вид-поддержки",
+      "inverse": "условие"
+    }
+  ],
+  "projections": [
+    {
+      "name": "УсловиеE",
+      "modelName": "i-i-s-i-s-s5-условие",
+      "attrs": [
+        {
+          "name": "номерУсловия",
+          "caption": "Номер условия",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ВидПоддержкиE",
+          "caption": "Вид поддержки",
+          "name": "видПоддержки",
+          "relatedTo": "i-i-s-i-s-s5-вид-поддержки",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "УсловиеL",
+      "modelName": "i-i-s-i-s-s5-условие",
+      "attrs": [
+        {
+          "name": "номерУсловия",
+          "caption": "Номер условия",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

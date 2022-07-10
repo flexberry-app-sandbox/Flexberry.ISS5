@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "пользователь",
+      "displayAttributeName": "фИО",
+      "required": true,
+      "relationName": "ВидПоддержки.Пользователь",
+      "projection": "ПользовательL",
+      "detailModelName": "i-i-s-i-s-s5-вид-поддержки"
+    }
+  ],
+  "external": false,
+  "caption": "Условие",
+  "name": "IISISS5УсловиеE",
+  "className": "УсловиеE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-i-s-s5-условие",
+      "modelProjection": "УсловиеE"
+    }
+  ]
+}
